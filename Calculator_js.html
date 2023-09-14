@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    div{ 
+
+        width: 300px;
+        height: 200px;
+        margin-left: 30%;
+        padding: 20px 5px;
+        border-radius: 3px solid red;
+        background-color: rgb(43, 174, 174);
+        
+    }
+    #hi {
+
+        margin-left: 10%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* margin-bottom: 10%; */
+        background-color: rgb(164, 104, 172);
+        
+    }
+#Fname{ 
+
+    background-color: pink;
+}
+#Lname{ 
+
+background-color: pink;
+}
+
+
+button{ 
+    margin-top: 10px;
+    background-color: wheat;
+}
+#name{
+margin-top: 10px;
+background-color: pink;
+}
+button:hover{
+    background-color: rgb(83, 83, 69);
+}
+
+
+</style>
+<body>
+    
+    <div>
+        <input type="text" name="First" id="Fname">
+        <br>
+        <select id="hi">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+       <br>
+        <input type="text" name="Second" id="Lname">
+        <br>
+        <button onclick="cl()"> Calculat</button>
+        <br>
+        <input type="text" name="" id="res" readonly=""/ > 
+    </div>
+</body>
+<script>
+    function cl(){
+        var g1=document.getElementById('Fname').value;
+        var g2=document.getElementById('Lname').value;
+        var g =document.getElementById('hi').value;
+        
+        if(g == '+'){
+            var res = parseInt(g1) +parseInt(g2);
+        }
+        
+        if(g == '-'){
+            var res = parseInt(g1) -parseInt(g2);
+        }
+        if(g == '*'){
+            var res = parseInt(g1) *parseInt(g2);
+        }
+        if(g == '/'){
+            var res = parseInt(g1) /parseInt(g2);
+        }
+       
+        document.getElementById('res').value=res;
+    }
+
+</script>
+</html>
